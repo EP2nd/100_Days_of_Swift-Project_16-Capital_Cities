@@ -11,8 +11,12 @@ import MapKit
 class ViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet var mapView: MKMapView!
     
+    let mapTypes = ["Standard": MKMapType.standard, "Muted Standard": MKMapType.mutedStandard, "Hybrid": MKMapType.hybrid, "Satellite": MKMapType.satellite]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Map type", style: .plain, target: self, action: #selector(selectMapType))
         
         let london = Capital(title: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), info: "Home to the 2012 Summer Olympics.")
         let oslo = Capital(title: "Oslo", coordinate: CLLocationCoordinate2D(latitude: 59.95, longitude: 10.75), info: "Founded over a thousand years ago.")
@@ -38,18 +42,42 @@ class ViewController: UIViewController, MKMapViewDelegate {
             annotationView?.rightCalloutAccessoryView = btn
         } else {
             annotationView?.annotation = annotation
+            
+            if let dequeuedPin = annotation as? MKPinAnnotationView {
+                dequeuedPin.pinTintColor = UIColor.black
+            }
         }
-        return annotationView
+        return annotationView as? MKPinAnnotationView
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let capital = view.annotation as? Capital else { return }
-        let placeName = capital.title
+        
+        /* let placeName = capital.title
         let placeInfo = capital.info
         
         let ac = UIAlertController(title: placeName, message: placeInfo, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true) */
+        
+        let vc = DetailViewController()
+        vc.detailItem = 
+    }
+    
+    @objc func selectMapType() {
+        let ac = UIAlertController(title: "Map type", message: "Please choose the type of map you would like to use.", preferredStyle: .alert)
+        for mapType in mapTypes {
+            ac.addAction(UIAlertAction(title: "\(mapType.key)", style: .default, handler: mapTypeSelection))
+        }
         present(ac, animated: true)
+    }
+    
+    func mapTypeSelection(action: UIAlertAction) {
+        guard let title = action.title else { return }
+        
+        if let mapType = mapTypes[title] {
+            mapView.mapType = mapType
+        }
     }
 }
 
