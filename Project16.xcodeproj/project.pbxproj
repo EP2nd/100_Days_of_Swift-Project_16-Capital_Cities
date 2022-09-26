@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B835C42828DF4C9800C71F34 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B835C42728DF4C9800C71F34 /* DetailViewController.swift */; };
+		B835C42A28E1B7A100C71F34 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B835C42928E1B7A100C71F34 /* WebViewController.swift */; };
 		B8372D8228D8FB5100E655B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8372D8128D8FB5100E655B3 /* AppDelegate.swift */; };
 		B8372D8428D8FB5100E655B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8372D8328D8FB5100E655B3 /* SceneDelegate.swift */; };
 		B8372D8628D8FB5100E655B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8372D8528D8FB5100E655B3 /* ViewController.swift */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B835C42728DF4C9800C71F34 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B835C42928E1B7A100C71F34 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B8372D7E28D8FB5100E655B3 /* Project16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project16.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8372D8128D8FB5100E655B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8372D8328D8FB5100E655B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,12 +62,12 @@
 			children = (
 				B8372D8128D8FB5100E655B3 /* AppDelegate.swift */,
 				B8372D8328D8FB5100E655B3 /* SceneDelegate.swift */,
-				B8372D8528D8FB5100E655B3 /* ViewController.swift */,
-				B8372D8728D8FB5100E655B3 /* Main.storyboard */,
-				B835C42728DF4C9800C71F34 /* DetailViewController.swift */,
 				B8372D9528D9A39800E655B3 /* Capital.swift */,
-				B8372D8A28D8FB5200E655B3 /* Assets.xcassets */,
+				B8372D8528D8FB5100E655B3 /* ViewController.swift */,
+				B835C42928E1B7A100C71F34 /* WebViewController.swift */,
+				B8372D8728D8FB5100E655B3 /* Main.storyboard */,
 				B8372D8C28D8FB5200E655B3 /* LaunchScreen.storyboard */,
+				B8372D8A28D8FB5200E655B3 /* Assets.xcassets */,
 				B8372D8F28D8FB5200E655B3 /* Info.plist */,
 			);
 			path = Project16;
@@ -146,8 +146,8 @@
 			files = (
 				B8372D8628D8FB5100E655B3 /* ViewController.swift in Sources */,
 				B8372D8228D8FB5100E655B3 /* AppDelegate.swift in Sources */,
-				B835C42828DF4C9800C71F34 /* DetailViewController.swift in Sources */,
 				B8372D9628D9A39800E655B3 /* Capital.swift in Sources */,
+				B835C42A28E1B7A100C71F34 /* WebViewController.swift in Sources */,
 				B8372D8428D8FB5100E655B3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
