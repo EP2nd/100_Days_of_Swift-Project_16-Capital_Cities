@@ -8,9 +8,11 @@
 import UIKit
 import WebKit
 
-// Challenge 3:
+/// Challenge 3:
 class WebViewController: UIViewController {
+    
     @IBOutlet var webView: WKWebView!
+    
     var urlString: String!
 
     override func viewDidLoad() {
@@ -18,7 +20,9 @@ class WebViewController: UIViewController {
         
         guard urlString != nil else {
             print("The URL address has not been set.")
+            
             navigationController?.popViewController(animated: true)
+            
             return
         }
         

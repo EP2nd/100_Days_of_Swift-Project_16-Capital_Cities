@@ -62,13 +62,13 @@
 			children = (
 				B8372D8128D8FB5100E655B3 /* AppDelegate.swift */,
 				B8372D8328D8FB5100E655B3 /* SceneDelegate.swift */,
-				B8372D9528D9A39800E655B3 /* Capital.swift */,
 				B8372D8528D8FB5100E655B3 /* ViewController.swift */,
 				B835C42928E1B7A100C71F34 /* WebViewController.swift */,
+				B8372D9528D9A39800E655B3 /* Capital.swift */,
 				B8372D8728D8FB5100E655B3 /* Main.storyboard */,
 				B8372D8C28D8FB5200E655B3 /* LaunchScreen.storyboard */,
-				B8372D8A28D8FB5200E655B3 /* Assets.xcassets */,
 				B8372D8F28D8FB5200E655B3 /* Info.plist */,
+				B8372D8A28D8FB5200E655B3 /* Assets.xcassets */,
 			);
 			path = Project16;
 			sourceTree = "<group>";
